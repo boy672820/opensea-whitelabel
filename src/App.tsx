@@ -1,25 +1,19 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 
 function App() {
+  const embeddedUrl = "https://opensea.io/assets/0x1301566b3cb584e550a02d09562041ddc4989b91/28";
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <iframe
+        id="opensea-iframe"
+        title="Embedded OpenSea Marketplace"
+        src={embeddedUrl}
+        width="100%"
+        height="1000px"
+        frameBorder="0"
+        allowFullScreen></iframe>
+    </>
   );
 }
 
